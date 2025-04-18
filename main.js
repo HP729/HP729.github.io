@@ -1,34 +1,13 @@
-const myImage = document.querySelector("img");
+function reorderList() {
+  const list = document.getElementById("interestList");
+  const items = Array.from(list.getElementsByTagName("li"));
 
-myImage.addEventListener("click", () => {
-  const mySrc = myImage.getAttribute("src");
-  if (mySrc === "UW.png") {
-    myImage.setAttribute("src", "UW2.png");
-  } else {
-    myImage.setAttribute("src", "UW.png");
+  // Shuffle using Fisher-Yates algorithm
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
   }
-});
 
-function setUserName() {
-  const myName = prompt("Please enter your name.");
-  if (!myName) {
-    setUserName();
-  } else {
-    localStorage.setItem("name", myName);
-    myHeading.textContent = `U r da g, ${myName}`;
-  }
-}
-
-let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
-
-myButton.addEventListener("click", () => {
-  setUserName();
-});
-
-if (!localStorage.getItem("name")) {
-  setUserName();
-} else {
-  const storedName = localStorage.getItem("name");
-  myHeading.textContent = `Hello, ${storedName}`;
+  list.innerHTML = "";
+  items.forEach((item) => list.appendChild(item));
 }
