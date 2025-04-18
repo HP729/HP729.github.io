@@ -32,3 +32,18 @@
 </ul>
 
 <button onclick="reorderList()">Reorder List</button>
+
+<script>
+  function reorderList() {
+    const list = document.getElementById("interestList");
+    const items = Array.from(list.getElementsByTagName("li"));
+
+    items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+    list.innerHTML = "";
+
+    items.forEach((item) => list.appendChild(item));
+  }
+</script>
+</body>
+</html>
