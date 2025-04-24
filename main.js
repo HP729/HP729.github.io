@@ -29,5 +29,3 @@ document.addEventListener("keydown", function (e) {
     links[currentIndex - 1].focus();
   }
 });
-
-alert("main.js is working!");
