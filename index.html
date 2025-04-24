@@ -13,7 +13,7 @@
   </head>
   <body>
     <h1>Welcome To My Website!</h1>
-    <!--links to the things to read page-->>
+    <!--links to the things to read page-->
     <nav>
       <ul>
         <li><a href="index.html" tabindex="1">Home</a></li>
@@ -37,19 +37,6 @@
 
     <button onclick="reorderList()" tabindex="3">Shuffle List</button>
 
-    <script>
-      function reorderList() {
-        const list = document.getElementById("interestList");
-        const items = Array.from(list.getElementsByTagName("li"));
-
-        for (let i = items.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [items[i], items[j]] = [items[j], items[i]];
-        }
-
-        list.innerHTML = "";
-        items.forEach((item) => list.appendChild(item));
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

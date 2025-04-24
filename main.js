@@ -11,3 +11,23 @@ function reorderList() {
   list.innerHTML = "";
   items.forEach((item) => list.appendChild(item));
 }
+
+document.addEventListener("keydown", function (e) {
+  const links = Array.from(document.querySelectorAll("a"));
+  const current = document.activeElement;
+  const currentIndex = links.indexOf(current);
+
+  if (
+    e.key === "ArrowDown" &&
+    currentIndex !== -1 &&
+    currentIndex < links.length - 1
+  ) {
+    e.preventDefault();
+    links[currentIndex + 1].focus();
+  } else if (e.key === "ArrowUp" && currentIndex > 0) {
+    e.preventDefault();
+    links[currentIndex - 1].focus();
+  }
+});
+
+alert("main.js is working!");
