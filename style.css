@@ -1,10 +1,14 @@
 html {
+  background-color: #ff9500;
   font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
   font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
 }
+
 h1 {
   font-size: 60px;
   text-align: center;
+  color: #1e1e1e;
+  padding: 20px 0;
 }
 
 p,
@@ -14,33 +18,49 @@ li {
   letter-spacing: 1px;
 }
 
-html {
-  background-color: #0a0442;
+.main-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #ff9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+img {
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539f;
-  text-shadow: 3px 3px 1px black;
+  color: #000000;
+  /* text-shadow: 3px 3px 1px black;*/ /* adds shadow */
+}
+h2 {
+  font-size: 28px;
+  margin-top: 30px;
+  color: #06123b; /* Dark blue for visual hierarchy */
 }
 
+p,
+li {
+  font-size: 18px;
+  line-height: 1.6; /* More readable line spacing */
+  color: #000;
+}
 img {
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
+  margin: 20px auto;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  border-radius: 8px; /* Slightly rounded corners */
 }
 
 nav ul {
   list-style: none;
+
   padding: 0;
   display: flex;
   justify-content: center;
@@ -61,15 +81,29 @@ nav ul a {
 
 nav ul a:focus,
 nav ul a:hover {
-  background-color: #ff9500;
-  outline: 2px solid #fff;
+  background-color: #dad7d4;
+  color: #000;
+  outline: 4px solid #08072f;
 }
 
 nav a:focus {
   outline: 3px solid #ffffff;
   background-color: #00539f;
 }
-
+button {
+  background-color: #0e287c; /* Blue background */
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/* Button hover state */
+button:hover {
+  background-color: #2f6ed2; /* Lighter blue */
+}
 button:focus {
   outline: 3px dashed white;
   background-color: #333;
@@ -80,4 +114,11 @@ a:focus {
   background-color: #ff9500;
   color: black;
   outline: 2px solid white;
+}
+body a:visited {
+  color: black;
+}
+
+nav a:visited {
+  color: white; /* Keep nav bar white */
 }
