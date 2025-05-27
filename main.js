@@ -34,6 +34,9 @@ document.addEventListener("keydown", function (e) {
     focusable[index - 1].focus();
   }
 });
+document.getElementById("toggleHelp").addEventListener("click", function () {
+  document.getElementById("helpContent").toggleAttribute("hidden");
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("toggleHelp");

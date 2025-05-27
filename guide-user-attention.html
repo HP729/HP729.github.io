@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html {
+        background-color: #860d0d;
+        font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
+        font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
+      }
+      .hero {
+        background-color: #a00000;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        margin-bottom: 30px;
+      }
+
+      .highlight {
+        background-color: #ffe9e9;
+        border-left: 6px solid #a00000;
+        padding: 15px;
+        font-size: 18px;
+        margin: 30px 0;
+      }
+
+      .gpu-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .gpu-gallery img {
+        width: 280px;
+        border-radius: 10px;
+      }
+
+      .cta-button {
+        background-color: #a00000;
+        color: white;
+        padding: 14px 24px;
+        text-decoration: none;
+        border-radius: 6px;
+        display: inline-block;
+        margin-top: 30px;
+      }
+
+      .cta-button:hover {
+        background-color: #cc2b2b;
+      }
+
+      .hero-image {
+        background-image: url("amdgpu.avif");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        position: relative;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .hero-text {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 80%;
+        border: 3px solid rgb(250, 13, 13);
+        color: white;
+      }
+
+      .hero-text h2 {
+        margin: 0;
+        font-size: 28px;
+        color: white; /* <-- Force white */
+      }
+
+      .hero-text p {
+        margin: 8px 0 0;
+        font-size: 16px;
+        color: white; /* <-- Force white */
+      }
+
+      .highlight-focus {
+        font-weight: bold;
+        color: #ffffff; /* AMD red */
+        background-color: #d00000;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+
+        .gpu-image {
+        display: block;
+        margin: 20px auto;
+        max-width: 50%;
+        border: 5px solid black;
+            border-radius: 10px;
+      }
+      .gpu-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.gpu-card {
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgb(78, 69, 69);
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.gpu-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gpu-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ff4848;
+}
+
+h1 {
+    color:#bfb9b9
+}
+      
+    </style>
+  </head>
+  <body>
+    <h1>Guide User Attention</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="things-to-read.html">Things to Read</a></li>
+        <li><a href="guide-user-attention.html">Guide User Attention</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <div class="hero-image">
+        <div class="hero-text">
+          <h2>AMD Graphic Cards</h2>
+          <p>Currently on RDNA4, AMD continues to push the limits of gaming.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        AMD's current GPU's: the 9070 & 9070XT were a success. With the 9060XT
+        releasing soon.
+      </div>
+
+      <h2>Popular AMD GPU Generations</h2>
+      <ul>
+        <li>
+          <span class="highlight-focus">Radeon RX 500 Series</span>
+        </li>
+
+        <img src="rx500.png" alt="RX 500 Series GPU" class="gpu-image" />
+        <p style="font-style: italic">
+          The RX 500 Series was released in 2017. It offered great value and
+          performance.
+        </p>
+
+        <li>
+          <span class="highlight-focus">Radeon RX 5000 Series (RDNA 1)</span>
+        </li>
+        <img src="rdna1.webp" alt="RX 5000 Series GPU" class="gpu-image" />
+        <p style="font-style: italic">
+          The RX 5000 Series was released in 2019. It was the first AMD GPU to
+          use the RDNA architecture.
+        </p>
+
+        <li>
+          <span class="highlight-focus">Radeon RX 6000 Series (RDNA 2)</span>
+        </li>
+        </li>
+        <img src="rdna3.avif" alt="RX 6000 Series GPU" class="gpu-image" />
+        <p style="font-style: italic">
+          The RX 6000 Series was released in 2020. It was the second generation of the RDNA architecture.
+        </p>
+
+         <li>
+          <span class="highlight-focus">Radeon RX 7000 Series (RDNA 3)</span>
+        </li>
+        <img src="7000series.png" alt="RX 7000 Series GPU" class="gpu-image" />
+        <p style="font-style: italic">
+          The RX 7000 Series was released in 2022. It was the third generation of the RDNA architecture.
+        </p>
+      </ul>
+
+      <h2>Current Generation</h2>
+
+<div class="gpu-gallery">
+  <div class="gpu-card">
+    <img src="9070.avif" alt="Radeon RX 9070" />
+    <p class="gpu-label">Radeon RX 9070</p>
+  </div>
+  <div class="gpu-card">
+    <img src="9070xt.avif" alt="Radeon RX 9070 XT" />
+    <p class="gpu-label">Radeon RX 9070 XT</p>
+  </div>
+
+  </body>
+</html>
